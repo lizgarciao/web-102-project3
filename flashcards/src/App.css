@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  color: rgb(179, 59, 59);
+}
+
+button {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 5px 15px #888888;
+}
