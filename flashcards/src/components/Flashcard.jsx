@@ -9,8 +9,8 @@ function Flashcard() { // setShowAnswer is a function that changes the state of 
         { question: 'Nadar', answer: 'To swim!' },
         { question: 'Volar', answer: 'To fly!' },
         { question: 'Bailar', answer: 'To dance!' }
-      ];
-    
+    ];
+
     const [currentCardIndex, setCurrentCardIndex] = useState(0); // keep track of which card to use
     const [showAnswer, setShowAnswer] = useState(false); // keep track of whether to show the answer
 
@@ -28,27 +28,31 @@ function Flashcard() { // setShowAnswer is a function that changes the state of 
     };
 
     return (
-        <div className="flashcard-container">
-          <div className="flashcard">
-            <div className="flashcard-content">
-              {showAnswer ? (
-                <div className="flashcard-answer">
-                  <h3>Answer:</h3>
-                  <h3 className='answer'>{card.answer}</h3>
-                  <div><button onClick={handleNext}>Next</button></div>
+        <span className="flashcard-container">
+            <div className="flashcard" onClick={toggleAnswer}>
+                <div className="flashcard-content">
+                    {showAnswer ? (
+                        <div>
+                            <div className="flashcard-answer">
+                                <h3>Answer:</h3>
+                                <h3 className='answer'>{card.answer}</h3>
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="flashcard-question">
+                            <h3>What does this word mean? </h3>
+                            <h3 className='question'>{card.question}</h3>
+                        </div>
+                    )}
                 </div>
-              ) : (
-                <div className="flashcard-question">
-                  <h3>What does this word mean? </h3>
-                  <h3 className='question'>{card.question}</h3>
-                  <div><button onClick={toggleAnswer}>Show Answer</button></div>
-                </div>
-              )}
             </div>
-          </div>
-        </div>
-      );
-    }
-    
+            <div>
+                {<div><button className="next-button" onClick={handleNext}>Next</button></div>}
+
+            </div>
+        </span>
+    );
+}
+
 
 export default Flashcard;
