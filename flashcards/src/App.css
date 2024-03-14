@@ -13,4 +13,24 @@ button {
   border: 1px solid;
   padding: 10px;
   box-shadow: 5px 5px 15px #888888;
+  margin-bottom: 2.5rem;
+}
+
+#back-button {
+  margin-right: 2rem;
+}
+.button-container {
+  display: flex;
+  justify-content:space-around;
+  margin-top: 2rem;
+}
+
+#wrong{
+  color: darkred;
+  font-size: 1.5rem;
+}
+
+#correct{
+  color: green;
+  font-size: 1.5rem;
 }

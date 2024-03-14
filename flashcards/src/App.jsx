@@ -13,11 +13,9 @@ const App = () => {
         <h2 style={{color:"purple"}}> Click on the card to see the answer. </h2>
         <h2> Number of cards: 5 </h2>
       </div>
+      < Flashcard />
       
-      <Flashcard />
-
-      
-      </div>
+    </div>
   )
 }
 
